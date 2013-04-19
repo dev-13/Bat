@@ -25,11 +25,15 @@
     // Handle the batterystatus event
     //
     function onBatteryStatus(info) {
-        console.log("Level: " + info.level + " isPlugged: " + info.isPlugged); 
+        console.log("Level: " + info.level + " isPlugged: " + info.isPlugged);
+        var element = document.getElementById('Bat');
+         element.innerHTML = 'Niveau de Batterie : '     + info.level     + '<br />' +
+                             ' isPlugged: '              + info.isPlugged + '<br />';
     }
 
     </script>
   </head>
   <body onload="onLoad()">
+     <p id="Bat">Loading device properties...</p>
   </body>
 </html>
